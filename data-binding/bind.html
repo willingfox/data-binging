@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body id="bind">
+		<div>{{name}}</div>
+		<ul>
+			<li b-repeat="todo in todos">{{todo.text}}</li>
+		</ul>
+		<script type="text/javascript" src="jquery.min.js" ></script>
+		<script type="text/javascript" src="binding.js"></script>
+		<script>
+			bind1 = $('#bind').binding({
+				data: {
+					name:'jack',
+					todos:[{
+						text:1
+					},{
+						text:2
+					}]
+				}
+			})
+		</script>
+	</body>
+
+</html>
